@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>라스트워 시즌 3 실전 종합 가이드 v2</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--ink:#182230;--muted:#667085;--line:#e1e5ec;--p:#4f46e5;--p2:#3730a3;--g:#087f5b;--w:#b45309;--r:#b42318}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.72}
+.wrap{max-width:1140px;margin:auto;padding:22px}
+.hero{background:linear-gradient(135deg,#161b2d,#40358f);color:#fff;border-radius:26px;padding:42px 36px;margin-bottom:18px;box-shadow:0 18px 45px #11182722}
+.hero h1{font-size:36px;line-height:1.25;margin:10px 0}.hero p{margin:7px 0;color:#e9e9f6}
+.tag{display:inline-block;padding:5px 10px;border:1px solid #ffffff35;background:#ffffff14;border-radius:999px;font-size:13px;margin:3px 5px 3px 0}
+nav{position:sticky;top:8px;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;padding:9px 12px;margin:14px 0;box-shadow:0 5px 20px #1118270c}
+nav a{display:inline-block;text-decoration:none;color:var(--p2);font-weight:800;font-size:13px;margin:4px 7px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:27px;margin:18px 0;box-shadow:0 6px 22px #11182708}
+h2{font-size:25px;margin:0 0 12px}h3{font-size:18px;margin:22px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.box{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fbfcff}.box strong{display:block;margin-bottom:5px}
+.good{border-left:5px solid var(--g)}.warn{border-left:5px solid var(--w)}.danger{border-left:5px solid var(--r)}
+.callout{background:#eef2ff;border:1px solid #c7d2fe;border-radius:15px;padding:16px}
+.note{font-size:13px;color:var(--muted);background:#f7f8fb;border-radius:12px;padding:12px 14px}
+.small{font-size:13px;color:var(--muted)}.kpi{font-size:27px;font-weight:900}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f7f8fb}
+ul,ol{padding-left:22px}.check{list-style:none;padding:0}.check li{margin:7px 0}.check li:before{content:"☐ ";font-weight:900}
+a{color:#4338ca}.footer{font-size:12px;color:var(--muted);padding:18px 4px 55px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 8px;border-radius:999px;background:#eef2ff;color:#3730a3}
+details{border:1px solid var(--line);border-radius:14px;margin:12px 0;background:#fff;overflow:hidden}
+details>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:900;background:#f8f9fc;color:#252b3a}
+details>summary::-webkit-details-marker{display:none}
+details>summary:before{content:"＋";display:inline-block;width:25px;color:var(--p);font-size:18px}
+details[open]>summary:before{content:"−"}
+.details-body{padding:16px 18px;border-top:1px solid var(--line)}
+.source-list a{word-break:break-all}
+@media(max-width:760px){.wrap{padding:12px}.hero{padding:29px 22px}.hero h1{font-size:28px}.grid,.grid3{grid-template-columns:1fr}nav{top:0}nav a{margin:3px 5px}}
+@media print{body{background:#fff}.hero{box-shadow:none}.card{break-inside:avoid;box-shadow:none}nav{position:static}details{break-inside:avoid}details[open] .details-body{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+<span class="tag">Last War: Survival Game</span><span class="tag">Season 3 · Golden Kingdom</span><span class="tag">배포용 v2</span>
+<h1>시즌 3 실전 종합 가이드</h1>
+<p>초보자용 핵심 요약 + R4/R5용 세부 운영을 하나의 문서에 통합했습니다.</p>
+<p class="small" style="color:#d8d9e8">아래 회색/흰색의 「세부내용 펼치기」를 누르면 해당 공략의 상세 규칙과 실전 팁을 확인할 수 있습니다.</p>
+</section>
+
+<nav>
+<a href="#quick">핵심10줄</a><a href="#start">시즌시작</a><a href="#economy">경제</a><a href="#buildings">건물</a>
+<a href="#resist">저주내성</a><a href="#protectors">수호자</a><a href="#sandworm">모래벌레</a><a href="#oasis">오아시스</a>
+<a href="#spice">Spice War</a><a href="#heroes">영웅</a><a href="#weeks">주차별</a><a href="#daily">체크</a><a href="#sources">출처</a>
+</nav>
+
+<section id="quick" class="card">
+<h2>1. 시즌 3 핵심 10줄</h2>
+<div class="grid3">
+<div class="box good"><strong>① 수호자 필드</strong>초반 <b>Lv10에서 멈춤</b>.</div>
+<div class="box good"><strong>② 축복의 샘</strong>사용 가능한 샘을 <b>모두 Lv15</b>까지 맞춘 뒤 균등 성장.</div>
+<div class="box good"><strong>③ 저주 연구소</strong><b>Lv30</b>을 최우선 목표로.</div>
+<div class="box good"><strong>④ 내성 리더</strong>최고 저주 내성 플레이어를 주요 거점 집결 리더로 지정.</div>
+<div class="box good"><strong>⑤ 얼라이언스 센터</strong>2일차 건설 후 <b>센터 범위 안</b>에 자리 잡기.</div>
+<div class="box warn"><strong>⑥ 종말의 방랑자</strong>시즌 전 첫 처치를 소모하지 말고 시즌 후 가능한 최고 단계로 매일 처리.</div>
+<div class="box warn"><strong>⑦ 녹화</strong>첫 도시 확보 즉시 시작.</div>
+<div class="box warn"><strong>⑧ 수호자</strong>거점·Spice War·교역 거점·거대 모래벌레 등 고가치 전투에 보존.</div>
+<div class="box danger"><strong>⑨ Spice War</strong>부속건물 4개를 우선 파괴하고 센터까지 노려 최대 30% 약탈.</div>
+</div>
+<div class="callout" style="margin-top:14px"><b>⑩ 시즌의 최종 경쟁 자원은 Spice</b><br>도시 점유, Spice War, 얼라이언스 센터 생산, 최종 Capitol War 등으로 Spice를 확보하고 랭킹을 높입니다.</div>
+</section>
+
+<section id="start" class="card">
+<h2>2. 시즌 시작 전 / 첫날</h2>
+<h3>시즌 시작 전</h3>
+<ul class="check"><li>체력·가속을 가능한 범위에서 비축.</li><li>시즌 전문능력 초기 방향을 정해둔다.</li><li><b>종말의 방랑자 첫 처치를 시즌 전에 소비하지 않는다.</b></li><li>귀환 모집 티켓은 시즌 초 미스릴·성수 확보에 활용할 수 있으나 다음 시즌을 위한 일부 보관도 고려.</li></ul>
+<h3>첫날 우선순위</h3>
+<ol><li>수호자 필드 Lv10.</li><li>가능한 축복의 샘을 모두 Lv15까지 균등 육성.</li><li>저주 연구소에 자원을 집중.</li><li>가능한 최고 단계의 첫 처치 보상 확보.</li><li>미라 방랑군주·좀비 첫 처치 등 시즌 초반 자원원을 적극 활용.</li></ol>
+</section>
+
+<section id="economy" class="card">
+<h2>3. 시즌 경제 구조</h2>
+<p class="kpi">미스릴 → 축복의 샘 → 성수 → 저주 연구소 → 저주 내성 → 거점/시즌 콘텐츠 → Spice</p>
+<table><tr><th>자원</th><th>핵심 용도</th><th>주요 획득처</th></tr>
+<tr><td><b>미스릴</b></td><td>시즌 건물 성장</td><td>종말의 방랑자·좀비 첫 처치, 미라 방랑군주, 얼라이언스 센터, 거점, 사막 보물, 귀환 티켓, 자원 필드, 상점 등</td></tr>
+<tr><td><b>성수</b></td><td>저주 연구소 성장</td><td>축복의 샘, 센터 성수 시설, 첫 처치, 귀환 티켓, 퀘스트, 상점, 자원 필드 등</td></tr>
+<tr><td><b>Spice</b></td><td>시즌 경쟁 점수</td><td>도시, Spice War, 얼라이언스 센터, 일부 점령/전쟁 보상</td></tr>
+<tr><td><b>모래벌레 비늘</b></td><td>사막 상점 교환</td><td>모래벌레 전투·이벤트 보상</td></tr>
+</table>
+</section>
+
+<section id="buildings" class="card">
+<h2>4. 시즌 건물 우선순위</h2>
+<table><tr><th>순서</th><th>건물</th><th>원칙</th></tr>
+<tr><td>①</td><td>수호자 필드</td><td>초반 Lv10. Lv11+는 연구소 Lv30 및 제단 이후로 미룬다.</td></tr>
+<tr><td>②</td><td>축복의 샘</td><td>모두 Lv15 → 이후 모두 같은 레벨대로 균등 성장.</td></tr>
+<tr><td>③</td><td>저주 연구소</td><td>저주 내성의 핵심. Lv30에서 Scarlett UR과 제단이 열린다.</td></tr>
+<tr><td>④</td><td>얼라이언스 센터</td><td>R4/R5가 Day 2 위치 결정. 범위 내 주둔이 중요.</td></tr>
+<tr><td>⑤</td><td>제단</td><td>Lv30 연구소 이후 수호자 전투력을 강화.</td></tr>
+</table>
+<details><summary>세부내용 펼치기 — 얼라이언스 센터 생산 시설</summary><div class="details-body">
+<ul><li>외부 공략 기준 센터는 Spice 누적에 따라 자동 레벨업.</li><li>Lv5: Mithril Plant, Lv10: Exploratory Well, Lv15: Sacred Water Hut, Lv20: Obelisk가 핵심 생산/지원 시설로 열립니다.</li><li>생산물은 자동 수령이 아니므로 매일 센터 화면을 열어 직접 수령합니다.</li><li>특히 Lv20 Obelisk는 수호자 뿔 생산과 연결되므로 전쟁 준비 기간에 수령 누락을 피해야 합니다.</li></ul>
+</div></details>
+</section>
+
+<section id="resist" class="card">
+<h2>5. 저주 내성 — 시즌 3 초반 성장의 핵심</h2>
+<div class="callout"><b>가장 중요한 규칙:</b> 거점 공략에서는 「저주 내성이 가장 높은 플레이어가 집결을 시작한다」를 연맹의 기본 규칙으로 정하세요.</div>
+<table><tr><th>콘텐츠</th><th>저주 내성 요구치</th></tr><tr><td>거점 Lv1</td><td>3,750</td></tr><tr><td>Lv2</td><td>6,250</td></tr><tr><td>Lv3</td><td>8,250</td></tr><tr><td>Lv4</td><td>9,750</td></tr><tr><td>Lv5</td><td>10,250</td></tr><tr><td>Lv6</td><td>10,750</td></tr></table>
+<details><summary>세부내용 펼치기 — 저주 내성 계산과 집결 상속</summary><div class="details-body">
+<h3>내성의 기본 구조</h3>
+<p>저주 내성은 하드 임계치 방식입니다. 요구치 이상이면 정상적으로 전투하고, 미달하면 피해 효율이 크게 떨어집니다.</p>
+<ul><li>주요 원천: 저주 연구소 레벨</li><li>수호자 500+의 <b>Power of Adaptation</b>: 해당 행군에 +250 저주 내성</li><li>주간 패스: 초반 +250 저주 내성 보너스</li></ul>
+<h3>집결 리더 상속</h3>
+<p>집결에서는 <b>집결을 시작한 리더의 저주 내성</b>이 구성원에게 적용됩니다. 단, 특정 구성원의 자기 내성이 리더보다 높다면 그 구성원은 자기 내성을 적용받습니다.</p>
+<p><b>중요:</b> 내성이 높은 사람이 단순 참가자로 들어오는 것만으로는 다른 사람에게 내성이 공유되지 않습니다. 반드시 그 플레이어가 집결을 시작해야 합니다.</p>
+<h3>연맹 운영</h3>
+<ul><li>Day 1에 주 내성 리더를 공지.</li><li>백업 내성 리더도 1명 지정.</li><li>초기 거점 집결은 주 내성 리더가 시작.</li><li>주 내성 리더는 일반 좀비 집결보다 내성 제한 콘텐츠에 우선 배치.</li></ul>
+<h3>예외</h3>
+<p>좀비 Lv1~3 및 모든 모래벌레에는 저주 내성이 필요하지 않습니다. Spice War의 지휘관 대 지휘관 PvP에도 저주 내성이 적용되지 않습니다.</p>
+</div></details>
+</section>
+
+<section id="protectors" class="card">
+<h2>6. 사막 수호자 — 생산부터 전쟁까지</h2>
+<div class="grid">
+<div class="box good"><strong>500+</strong>Power of Adaptation: 공격/방어/HP +25%, 저주 내성 +250</div>
+<div class="box good"><strong>750+</strong>Death Shockwave</div>
+<div class="box warn"><strong>1,000+</strong>Blue Flame Spell</div>
+<div class="box danger"><strong>1,250+</strong>Protector Rally 해금</div>
+</div>
+<details><summary>세부내용 펼치기 — 수호자 생성·보관·전투 규칙</summary><div class="details-body">
+<h3>수호자는 일반 병사가 아닙니다</h3>
+<ul><li>시즌 3 전용 계절 병종이며 일반 병사보다 높은 기본 능력치를 가집니다.</li><li>전투에 참여한 수호자는 기본적으로 소모됩니다.</li><li>행군에 실었지만 실제 전투가 발생하지 않은 수호자는 필드로 돌아옵니다.</li><li>기지가 공격받아도 수호자 필드에 보관된 수호자는 안전합니다.</li></ul>
+<h3>수호자 생성</h3>
+<p>일반 훈련이 아니라 특정 병력 손실의 일부가 변환됩니다. 외부 가이드 기준 대상은 병원 수용 초과 사망, Duel VS 전투 사상자, Drill Ground Breach 사상자이며, 해당 손실의 10%가 대기 변환 풀에 들어갑니다. 이후 연맹원이 정찰기를 보내 변환합니다.</p>
+<h3>수호자 뿔</h3>
+<p>사막 상점과 얼라이언스 센터 Lv20 Obelisk 등에서 얻을 수 있습니다. 뿔 1개가 수호자 1명을 직접 추가하며, 사용 시 별도 확인창 없이 즉시 적용되는 것으로 안내되어 있으므로 실수 사용에 주의합니다.</p>
+<h3>행군 탑재량</h3>
+<p>영웅 1명당 해당 행군 총 병력의 약 1/10까지 수호자를 실을 수 있습니다. 따라서 수호자 전투에서는 작은 행군보다 가능한 한 완편 행군을 활용하는 편이 효율적입니다.</p>
+<h3>Protector Rally</h3>
+<p>1,250 수호자 조건을 충족하면 수호자 집결이 가능하며, 외부 가이드 기준 준비시간 1분·행군 속도 3배·리더 강화 상속이 핵심 장점입니다. Spice War와 Capitol War의 핵심 전투 형식으로 활용할 수 있습니다.</p>
+<h3>사용하지 말아야 할 곳</h3><p>일반 좀비 파밍, 가치 낮은 PvP, 승산이 불확실한 공격에는 가급적 사용하지 않습니다.</p>
+<h3>불굴의 의지</h3><p>전문능력 Lv70에서 잃은 수호자의 최대 10%를 반환하는 것으로 안내됩니다.</p>
+</div></details>
+</section>
+
+<section id="sandworm" class="card">
+<h2>7. Sandworm Crisis — 첫 14일 운영법</h2>
+<div class="grid3">
+<div class="box"><strong>소형</strong>기지를 묶어 새 병력 큐를 막음</div>
+<div class="box warn"><strong>대형</strong>센터 범위 밖이면 기지를 강제 이동시킬 수 있음</div>
+<div class="box good"><strong>거대</strong>Trap Landmine으로 포획 후 연맹 집결</div>
+</div>
+<details><summary>세부내용 펼치기 — 충격파·소형·대형·거대 모래벌레</summary><div class="details-body">
+<h3>이벤트 기간</h3><p>외부 가이드 기준 시즌 3 1주차 Day 1부터 14일간 진행됩니다. 핵심 화폐는 Sandworm Scales이며 사막 상점에서 수호자 뿔·미스릴·성수·Desert Compass 등을 구매할 수 있습니다.</p>
+<h3>충격파</h3><p>연맹원이 좀비·Doom Elite·맵 적을 처치하면 연맹 공용 충격파 게이지가 올라갑니다. 게이지를 마지막으로 채운 지휘관이 소형 모래벌레의 대상이 되며, 발견자 보너스를 받습니다.</p>
+<h3>소형</h3><p>기지에서 새 병력 큐를 보낼 수 없게 만들지만 기존 행군과 진행 중인 집결은 계속됩니다. 텔레포트하면 모래벌레가 사라지는 대신 해당 조우의 보상을 포기하게 됩니다. 가능하면 연맹에 알리고 잡는 편이 좋습니다.</p>
+<h3>대형</h3><p>집결 공격이 필요하며, <b>얼라이언스 센터 범위 밖</b>의 기지는 강제 이동될 수 있습니다. 따라서 시즌 초 Day 2부터 센터 범위 안에 있는 것이 매우 중요합니다.</p>
+<h3>거대</h3><p>자유 이동 중에는 공격할 수 없고 <b>Trap Landmine</b>으로 포획해야 합니다. 포획자는 외부 가이드 기준 발견자 보너스 500 Scales를 받고, 연맹에는 5개짜리 상자 세트 3개가 지급됩니다.</p>
+<h3>덫 설치 팁</h3><p>모래벌레 진행 방향을 몇 초 관찰한 뒤 현재 위치가 아니라 <b>진행 방향 앞쪽 2~3칸 길이</b> 정도에 덫을 설치하는 방식이 권장됩니다. 설치 전에 연맹 채팅에 알리고 집결 인원을 대기시키세요.</p>
+<h3>보상 제한</h3><ul><li>모래벌레 상자 일일 수집 한도: 30개</li><li>이벤트 목표 보상은 자동 수령이 아니므로 이벤트 페이지에서 직접 수령</li><li>Scales는 주간 상점이 초기화되어도 보유량이 유지됨</li></ul>
+</div></details>
+</section>
+
+<section id="oasis" class="card">
+<h2>8. Build an Oasis & Desert Artifacts</h2>
+<div class="callout"><b>첫 도시를 확보한 순간부터 녹화를 시작하세요.</b> 녹화는 전문 XP + 지역 진행 + 개인 랭킹 + 유물 획득을 동시에 만들어내는 누적 콘텐츠입니다.</div>
+<table><tr><th>구간</th><th>핵심</th></tr><tr><td>1~4주차</td><td>도시 주변 인접 타일 녹화. 거점·교역 거점·Capitol은 녹화 대상 아님.</td></tr><tr><td>5~7주차</td><td>거점·교역 거점·Capitol 방향으로 확대 + 교차 워존 녹화 가능.</td></tr></table>
+<details><summary>세부내용 펼치기 — 녹화 효율·유물·일일 한도</summary><div class="details-body">
+<h3>녹화 규칙</h3><ul><li>기존 녹화 지역에 인접한 타일만 녹화 가능.</li><li>도시가 점령되면 주변 지역이 자동으로 녹화된 시작점이 됩니다.</li><li>같은 지역의 <b>80%</b> 녹화가 다음 단계 진행의 핵심 기준입니다.</li><li>다른 연맹이 점령한 도시가 만든 녹화 지역에서도 확장할 수 있습니다.</li></ul>
+<h3>효율적인 비행</h3><ul><li>현재 녹화 지역의 중앙이 아니라 <b>가장자리(frontier)</b>에 정찰기를 보냅니다.</li><li>직선으로 안쪽을 반복하기보다 대각선 방향으로 외곽을 확장하면 적은 출동으로 더 많은 신규 타일을 확보하기 쉽습니다.</li><li>알려진 유물 좌표에는 기지·광산·시설을 세우지 않습니다.</li></ul>
+<h3>전문능력 우선순위</h3><p><b>Double Greenification</b>은 1×1에서 3×3으로 녹화 범위를 확대하므로 장기적으로 가장 큰 효율 증가를 가져오는 핵심 스킬입니다. 이후 <b>Nature's Touch</b>로 9×9까지 확대할 수 있습니다.</p>
+<h3>유물</h3><ul><li>유물은 고정 좌표에 묻혀 있으며 녹화로 해당 타일을 열면 자동 획득.</li><li>7단계까지 존재하며 Lv6~7의 Golden Chest에서 Weapon Shards가 중요한 보상입니다.</li><li>유물은 같은 시즌 같은 좌표에서 재생성되지 않습니다.</li><li><b>하루 최대 5개</b>를 개인이 획득할 수 있습니다.</li></ul>
+<h3>매일 5개를 목표로</h3><p>현재 접근 가능한 녹화 지역에서 유물 좌표 5개를 먼저 찾고 그 타일을 의도적으로 녹화하세요. 랜덤 확장보다 일일 유물 한도를 채우는 방식이 개인 보상 측면에서 효율적입니다.</p>
+<h3>연맹 운영</h3><p>같은 타일에 여러 명이 중복 출동하지 않도록 구역을 나누고, 5주차 전에 교차 워존에서 어느 지역을 지원할지 R4/R5가 미리 조율하는 것이 좋습니다.</p>
+</div></details>
+</section>
+
+<section id="spice" class="card">
+<h2>9. Spice Wars & Faction Duel</h2>
+<div class="grid">
+<div class="box good"><strong>전쟁 일정</strong>외부 가이드 기준 4~8주차 수·토 주 2회</div>
+<div class="box warn"><strong>약탈</strong>부속 4개 × 5% + 센터 10% = 최대 30%</div>
+<div class="box danger"><strong>핵심 순서</strong>부속건물 → 얼라이언스 센터</div>
+<div class="box"><strong>주요 전술</strong>Warlord Missile + 수호자 집결 + 건물 집중</div>
+</div>
+<details><summary>세부내용 펼치기 — Spice Plunder 상세 규칙</summary><div class="details-body">
+<table><tr><th>파괴 대상</th><th>Spice 약탈</th></tr><tr><td>Mithril Plant</td><td>5%</td></tr><tr><td>Exploratory Well</td><td>5%</td></tr><tr><td>Sacred Water Hut</td><td>5%</td></tr><tr><td>Obelisk</td><td>5%</td></tr><tr><td>Alliance Center</td><td>10%</td></tr><tr><td><b>총 최대</b></td><td><b>30%</b></td></tr></table>
+<p><b>중요:</b> 센터를 먼저 파괴해도 이후 부속건물의 5%가 사라지는 것은 아닙니다. 다만 센터가 가장 어렵고 방어가 강한 목표이므로, 시간이 부족해질 경우를 대비해 부속건물을 먼저 파괴하는 것이 전술적으로 유리합니다.</p>
+<p>또한 전쟁의 승패 자체가 약탈 여부를 결정하지 않습니다. 건물을 파괴하면 해당 건물의 Spice가 이전됩니다.</p>
+</div></details>
+<details><summary>세부내용 펼치기 — Warlord Missile 운영</summary><div class="details-body">
+<ul><li>공격 연맹 R5인 Warlord가 준비/전쟁 단계에서 미사일을 발사할 수 있습니다.</li><li>발사 후 <b>3분 카운트다운</b> 동안 Warlord의 위치가 공개되고 공격받을 수 있습니다.</li><li>Warlord가 카운트다운 동안 돌파당하면 발사가 실패하며, 외부 가이드 기준 72시간 재사용 대기시간이 적용됩니다.</li><li>성공하면 선언한 목표 지역에 35×35 타일 규모의 오염 지역 효과가 발생합니다.</li><li>공격 측은 발사 전에 Warlord 주변을 방어하고, 방어 측은 위치가 공개되는 즉시 빠른 부대로 Warlord를 압박합니다.</li></ul>
+<p class="note">사용자 제공 자료에는 미사일 이후 강제 이동·재배치 사례가 있으므로, 전쟁 전 「미사일 발사 → 적 진입 → 센터 주변 재배치」 담당자를 미리 정하는 것을 권장합니다.</p>
+</div></details>
+<details><summary>세부내용 펼치기 — 방어 SOP</summary><div class="details-body">
+<ol><li>전쟁 전 센터 내구도를 최대한 회복.</li><li>센터뿐 아니라 4개 부속건물에도 방어 병력을 배치.</li><li>가장 강한 병력과 수호자를 핵심 건물에 분산.</li><li>공격자의 건물 접근을 최대한 먼저 차단.</li><li>미사일 발사 알림이 뜨면 Warlord 위치를 찾아 즉시 압박.</li><li>Protector Rally가 들어오는 건물은 한 부대가 아니라 중첩 방어.</li></ol>
+</div></details>
+<details><summary>세부내용 펼치기 — Week 7 Faction Duel & Capitol War</summary><div class="details-body">
+<p>Week 7은 6일간 Invasion Rights 경쟁 후 Day 7 Capitol War로 이어지는 최종전 구간입니다.</p>
+<table><tr><th>활동</th><th>자료상 포인트</th></tr><tr><td>Apex Arena 1위</td><td>500,000</td></tr><tr><td>Advanced Storm Arena 1위</td><td>500,000</td></tr><tr><td>Desert Storm 승리</td><td>50,000</td></tr><tr><td>Alliance Duel 승리</td><td>25,000</td></tr><tr><td>Trade Truck 약탈</td><td>10,000</td></tr></table>
+<p>Capitol War에서는 Capitol이 <b>+10,000,000 Spice</b>, 각 Cannon이 <b>+5,000,000 Spice</b>로 안내됩니다. Capitol만 보지 말고 Cannon 목표도 분담해야 합니다.</p>
+<p>이 단계는 한 연맹 단독전이 아니라 같은 faction의 여러 워존·연맹이 함께 움직이는 구조이므로, 공격 목표·시간·수호자 예비량을 사전에 합의하는 것이 중요합니다.</p>
+</div></details>
+</section>
+
+<section id="heroes" class="card">
+<h2>10. 영웅·전용무기</h2>
+<table><tr><th>영웅</th><th>외부 가이드 기준</th><th>효과</th></tr><tr><td>Marshall</td><td>1주차 4일</td><td>몬스터 피해 +10%</td></tr><tr><td>Schuyler</td><td>3주차 4일</td><td>몬스터 피해 +10%</td></tr><tr><td>McGregor</td><td>6주차 4일</td><td>몬스터 피해 +10%</td></tr></table>
+<details><summary>세부내용 펼치기 — Scarlett UR / Hero Swap</summary><div class="details-body">
+<ul><li>Scarlett은 시즌 3에서 UR 승급 대상입니다.</li><li>외부 가이드 기준 저주 연구소 Lv30에서 Scarlett UR 승급이 열립니다.</li><li>사용자 자료에는 UR 배지, Scarlett 조각, 5성 조건이 함께 정리되어 있습니다.</li><li>Hero Swap은 2주차에 진행되며 레벨·별·장비 등을 1:1로 교환할 수 있습니다.</li><li>전용무기는 영웅 교체로 그대로 이전되지 않으며, 영웅이 5성 미만이 되면 전용무기가 비활성화될 수 있습니다.</li></ul>
+</div></details>
+</section>
+
+<section id="weeks" class="card">
+<h2>11. 1~8주차 운영 로드맵</h2>
+<table><tr><th>주차</th><th>개인</th><th>연맹</th></tr>
+<tr><td>시즌 전</td><td>체력·가속 비축, 방랑자 보류</td><td>내성 리더·센터 위치·전쟁 역할 정리</td></tr>
+<tr><td>1주</td><td>필드10, 샘15, 연구소, 첫 처치, 녹화 시작</td><td>센터 건설·거점·모래벌레 대응</td></tr>
+<tr><td>2주</td><td>Hero Swap·사막 보물·거점 확장</td><td>교역 거점 및 자원 루틴</td></tr>
+<tr><td>3주</td><td>Scarlett UR·Schuyler 무기·수호자 비축</td><td>faction 선택·교차 워존 대비</td></tr>
+<tr><td>4주</td><td>전쟁 자산 보존</td><td>Spice War 시작</td></tr>
+<tr><td>5주</td><td>Stage 2 녹화·고레벨 유물</td><td>교차 워존 영역전</td></tr>
+<tr><td>6주</td><td>McGregor 무기·전쟁 준비</td><td>전쟁 자산 집중</td></tr>
+<tr><td>7주</td><td>최종전 자원·수호자 보존</td><td>Faction Duel → Capitol War</td></tr>
+<tr><td>8주</td><td>상점·보상·업적 정리</td><td>최종 Spice·랭킹 관리</td></tr></table>
+</section>
+
+<section id="daily" class="card">
+<h2>12. 하루 5분 체크리스트</h2>
+<ul class="check">
+<li>최고 레벨 종말의 방랑자 첫 처치를 했는가?</li><li>미라 방랑군주·좀비 첫 처치·정예병을 놓치지 않았는가?</li>
+<li>샘·연구소 업그레이드가 멈추지 않았는가?</li><li>거점·센터 생산물을 직접 수령했는가?</li>
+<li>도시 확보 후 녹화를 시작했는가?</li><li>오늘 유물 5개를 확보할 수 있는가?</li><li>모래벌레 이벤트 목표 보상을 직접 수령했는가?</li>
+<li>수호자를 일반 사냥에 낭비하지 않았는가?</li><li>Spice War 일정과 연맹 공지를 확인했는가?</li>
+<li>다음 전쟁용 병력·체력·가속·수호자를 남겼는가?</li>
+</ul>
+</section>
+
+<section id="mistakes" class="card">
+<h2>13. 흔한 실수</h2>
+<ol>
+<li>수호자 필드 Lv10 이후 너무 일찍 과투자.</li><li>축복의 샘을 한 곳만 과성장.</li><li>내성 부족 상태에서 Lv4+ 좀비/고단계 거점 도전.</li>
+<li>내성 높은 사람이 집결 참가만 하고 직접 집결을 시작하지 않음.</li><li>수호자를 일반 사냥에 사용.</li><li>시즌 전 종말의 방랑자 첫 처치 소비.</li>
+<li>도시 점령 후 녹화 지연.</li><li>유물 좌표 위에 기지/시설 설치.</li><li>센터 범위 밖에서 대형 모래벌레를 맞음.</li>
+<li>Spice War에서 부속건물 방어를 무시.</li><li>Warlord Missile 발사 시 Warlord 보호/저격 대응을 준비하지 않음.</li><li>이벤트 목표·센터 생산물·유물 보상을 수동 수령하지 않음.</li>
+</ol>
+</section>
+
+<section id="sources" class="card">
+<h2>14. 세부 공략 출처</h2>
+<p>이번 v2에서는 요청하신 5개 Last War Handbook 세부 공략을 직접 반영했습니다.</p>
+<ul class="source-list">
+<li><a href="https://lastwarhandbook.com/guides/season-3-desert-protectors-guide" target="_blank" rel="noopener">① Desert Protectors Guide</a></li>
+<li><a href="https://lastwarhandbook.com/guides/season-3-curse-resistance-guide" target="_blank" rel="noopener">② Curse Resistance Guide</a></li>
+<li><a href="https://lastwarhandbook.com/guides/season-3-sandworm-crisis-guide" target="_blank" rel="noopener">③ Sandworm Crisis Guide</a></li>
+<li><a href="https://lastwarhandbook.com/guides/season-3-oasis-desert-artifacts-guide" target="_blank" rel="noopener">④ Build an Oasis & Desert Artifacts Guide</a></li>
+<li><a href="https://lastwarhandbook.com/guides/season-3-spice-wars-faction-duel-guide" target="_blank" rel="noopener">⑤ Spice Wars & Faction Duel Guide</a></li>
+<li><a href="https://lastwarhandbook.com/guides/season-3-guide" target="_blank" rel="noopener">⑥ Season 3 Complete Guide</a></li>
+</ul>
+<div class="note"><b>주의:</b> 이 문서는 팬메이드 종합본입니다. 서버별 이벤트 시간·밸런스·수치가 변경될 수 있으므로 실제 게임 UI가 최종 기준입니다.</div>
+</section>
+
+<div class="footer">라스트워 시즌 3 실전 종합 가이드 v2 · Fan-made · 외부 공략 내용을 한국어로 재구성한 배포용 자료</div>
+</div>
+</body>
+</html>
